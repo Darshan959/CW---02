@@ -8,26 +8,46 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(recipe['name']!)),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Ingredients',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 10),
-            Text(recipe['ingredients']!),
-            SizedBox(height: 20),
-            Text(
-              'Instructions',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 10),
-            Text(recipe['instructions']!),
-          ],
+      appBar: AppBar(
+        title: Text(recipe['name']!),
+        backgroundColor: Colors.redAccent,
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(height: 20),
+              Text(
+                'Ingredients',
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.redAccent,
+                ),
+              ),
+              SizedBox(height: 10),
+              Text(
+                recipe['ingredients']!,
+                style: TextStyle(fontSize: 16, height: 1.5),
+              ),
+              SizedBox(height: 20),
+              Text(
+                'Instructions',
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.redAccent,
+                ),
+              ),
+              SizedBox(height: 10),
+              Text(
+                recipe['instructions']!,
+                style: TextStyle(fontSize: 16, height: 1.5),
+              ),
+            ],
+          ),
         ),
       ),
     );

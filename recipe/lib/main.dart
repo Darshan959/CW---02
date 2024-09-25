@@ -10,7 +10,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Recipe Book',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
       home: HomeScreen(),
     );
   }
